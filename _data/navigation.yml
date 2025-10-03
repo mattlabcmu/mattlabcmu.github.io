@@ -1,10 +1,5 @@
 - name: Projects
   link: /projects/
-  dropdown:
-    - name: MMPUG
-      link: /projects/mmpug
-    - name: BOSS
-      link: /projects/boss
 - name: Publications
   link: /publications/
 - name: People

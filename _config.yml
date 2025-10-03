@@ -55,11 +55,11 @@ markdown: kramdown
 highlighter: rouge
 
 collections:
-  products: 
+  projects: 
     output: true
-    layout: product
-    image: https://picsum.photos/id/16/800/600
+    layout: project
     show_sidebar: false
+    permalink: /projects/:path/
 
 social:
   youtube: http://www.youtube.com/@MattLabCMU
