@@ -1,0 +1,67 @@
+# This file contains the data for the People page.
+# You can add, edit, or remove members here.
+
+current:
+  - category: Lab Director
+    members:
+      - name: "Dr. Matthew Travers"
+        role: "Senior Systems Scientist"
+        link: "https://www.ri.cmu.edu/ri-faculty/matthew-j-travers/"
+        image: "/img/people/mtravers.jpg"
+
+  - category: Staff/Postdocs
+    members:
+      - name: "Dr. Zongyuan Shen"
+        role: "Postdoctoral Fellow"
+        link: "https://zongyuanshen.github.io/"
+        image: "/img/people/zshen.jpg"
+
+  - category: Graduate Students
+    subcategories:
+      - category: PhD Students
+        members:
+          - name: "Prasanna Sriganesh"
+            role: "Robotics Ph.D Student"
+            link: "https://prassi.me"
+            image: "/img/people/psriganesh.jpg"
+          - name: "Burhanuddin Shirose"
+            role: "Mech.E. Ph.D Student"
+            link: "https://bshirose.github.io/"
+            image: "/img/people/bshirose.jpg"
+      - category: Masters Students
+        members:
+          - name: "Anushree Sabnis"
+            role: "Mech.E. Masters Student"
+            link: "https://anushreesabnis.notion.site/Anushree-Sabnis-27ac5ae25b858060ad77f16c5df46a28"
+            image: "/img/people/asabnis.jpg"
+          - name: "Barath Satheeshkumar"
+            role: "Mech.E. Masters Student"
+            link: "https://www.linkedin.com/in/barathkrishnas"
+            image: "/img/people/bsathees.jpg"
+          - name: "Dhruv Dange"
+            role: "Robotics Masters Student"
+            link: "http://dhruvdange.com/"
+            image: "/img/people/ddange.jpg"
+
+  # - category: Visiting Scholars
+  #   members:
+  #     - name: "Example"
+  #       role: "University of Example"
+  #       image: "/img/people/placeholder.png"
+
+alumni:
+  - category: PhD Students
+    members:
+      - name: "Dr. Chase Noren"
+        role: "PhD in Robotics, 2025"
+        link: "https://www.linkedin.com/in/charles-noren-53795a366/"
+        now: "Army"
+        image: "/img/people/cnoren.jpg"
+
+  - category: Masters Student
+    members:
+      - name: "Namya Bagree"
+        role: "MS in Robotics, 2021"
+        link: "https://www.linkedin.com/in/namya-bagree/"
+        now: "Software Engineer at Mathworks"
+        image: "/img/people/placeholder.png"

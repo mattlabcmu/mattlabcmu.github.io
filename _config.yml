@@ -1,0 +1,66 @@
+# Site Settings
+lang: en
+title: Matt Lab
+tagline: 
+email: mtravers@andrew.cmu.edu
+description: >
+  We do Robot Autonomy, for the real-world!
+baseurl: ""
+# url: ""
+
+permalink: pretty
+favicon: /img/logos/mattlab_favicon.png
+force_theme: light
+
+paginate: 5
+paginate_path: "/blog/page:num"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - kramdown-parser-gfm
+  - jekyll-redirect-from
+
+exclude: 
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+livereload: true
+
+sass:
+  style: compressed
+  source_dir: _sass
+  # load_paths: 
+    # - node_modules
+
+#google_analytics: UA-code-here
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+
+markdown: kramdown
+highlighter: rouge
+
+collections:
+  products: 
+    output: true
+    layout: product
+    image: https://picsum.photos/id/16/800/600
+    show_sidebar: false
+
+social:
+  youtube: http://www.youtube.com/@MattLabCMU
+  
