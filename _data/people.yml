@@ -27,7 +27,7 @@ current:
           - name: "Burhanuddin Shirose"
             role: "Mech.E. Ph.D Student"
             link: "https://bshirose.github.io/"
-            image: "/img/people/bshirose.jpg"
+            image: "/img/people/b_shirose.jpg"
       - category: Masters Students
         members:
           - name: "Anushree Sabnis"
@@ -70,7 +70,7 @@ alumni:
         link: "https://www.linkedin.com/in/josh-spisak-b573b972/"
         now: "Senior Systems Engineer at Field AI"
         image: "/img/people/jspisak.jpg"
-      - name: "Joshua Spisak"
+      - name: "Adam Johnson"
         role: "MS ECE, 2024"
         link: "https://www.linkedin.com/in/adam-mescall-johnson/"
         now: "Robotics Engineer at Skild AI"
