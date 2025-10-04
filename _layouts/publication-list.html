@@ -1,0 +1,216 @@
+---
+layout: default
+show_sidebar: false
+---
+<div class="columns is-multiline">
+    <div class="column is-12">
+        {{ page.content }}
+    </div>
+
+    {% if page.collection %}
+        {% assign sorted_publications = site[page.collection] | sort: 'date' | reverse %}
+    {% else %}
+        {% assign sorted_publications = site.publications | sort: 'date' | reverse %}
+    {% endif %}
+
+    {%- comment -%}Collect all unique tags{%- endcomment -%}
+    {%- assign all_tags = "" | split: "," -%}
+    {%- for pub in sorted_publications -%}
+        {%- for tag in pub.tags -%}
+            {%- unless all_tags contains tag -%}
+                {%- assign all_tags = all_tags | push: tag -%}
+            {%- endunless -%}
+        {%- endfor -%}
+    {%- endfor -%}
+    {%- assign all_tags = all_tags | sort -%}
+
+    <div class="column is-12">
+        <div class="tags are-medium">
+            <strong class="mr-2">Filter by Tag:</strong>
+            {% for tag in all_tags %}
+                <a href="?tag={{ tag | url_encode }}" class="tag is-link is-light">{{ tag }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% assign current_year = "" %}
+    {% for pub in sorted_publications %}
+        {%- comment -%}Determine the primary link for the publication (website/details page){%- endcomment -%}
+        {%- assign website_url = nil -%}
+        {%- if pub.internal_url -%}
+            {%- assign website_url = pub.internal_url | relative_url -%}
+        {%- elsif pub.external_url -%}
+            {%- assign website_url = pub.external_url -%}
+        {%- elsif pub.paper_link -%}
+            {%- assign website_url = pub.paper_link -%}
+        {%- endif -%}
+
+        {%- assign pub_year = pub.date | date: '%Y' -%}
+        {%- if pub_year != current_year -%}
+            {%- assign current_year = pub_year -%}
+            <div class="column is-12">
+                <h2 class="title is-3 mt-5">{{ current_year }}</h2>
+                <hr class="mt-0 mb-5">
+            </div>
+        {%- endif -%}
+
+        <div class="column is-12 publication-item" data-tags="{{ pub.tags | join: ',' | downcase }}">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media is-block-mobile">
+                        {% if pub.image %}
+                        <div class="media-left">
+                            <a href="{{ website_url }}">
+                                <figure class="image is-128x128">
+                                    <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
+                                </figure>
+                            </a>
+                        </div>
+                        {% endif %}
+                        <div class="media-content">
+                            <p class="title is-4">
+                                <a href="{{ website_url }}">{{ pub.title }}</a>
+                            </p>
+                            <p class="subtitle is-6">{{ pub.authors }}</p>
+                            <div class="content">
+                                {% if pub.venue %}
+                                    <em>{{ pub.venue }}</em>
+                                {% endif %}
+                                {% if pub.date %}
+                                    <br><small>Published: {{ pub.date | date: '%B %-d, %Y' }}</small>
+                                {% endif %}
+                            </div>
+
+                            {% if pub.tags and pub.tags.size > 0 %}
+                            <div class="tags mb-3">
+                                {% for tag in pub.tags %}
+                                    <a href="?tag={{ tag | url_encode }}" class="tag is-link is-light">{{ tag }}</a>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            <div class="buttons">
+                                {% if pub.content != "" %}
+                                    <button class="button is-primary" onclick="toggleElement('abstract-{{ forloop.index }}')">Abstract</button>
+                                {% endif %}
+                                {% if website_url %}
+                                    <a href="{{ website_url }}" class="button is-info" {% if pub.external_url %}target="_blank" rel="noopener"{% endif %}>Website</a>
+                                {% endif %}                                
+                                {% if pub.paper_link %}
+                                    <a href="{{ pub.paper_link }}" class="button is-primary" target="_blank" rel="noopener">Full Paper</a>
+                                {% endif %}
+                                {% if pub.video %}
+                                    <a href="{{ pub.video }}" class="button is-info" target="_blank" rel="noopener">Video</a>
+                                {% endif %}
+                                {% if pub.github %}
+                                    <a href="{{ pub.github }}" class="button is-dark" target="_blank" rel="noopener">Code</a>
+                                {% endif %}
+                                {% if pub.bibtex %}
+                                    <button class="button is-primary" onclick="toggleElement('bibtex-{{ forloop.index }}')">Cite</button>
+                                {% endif %}
+                            </div>
+
+                            {% if pub.content != "" %}
+                            <div id="abstract-{{ forloop.index }}" class="content-container is-hidden">
+                                <div class="content">
+                                    {{ pub.content | markdownify }}
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if pub.bibtex %}
+                            <div id="bibtex-{{ forloop.index }}" class="content-container is-hidden">
+                                <pre class="bibtex-code"><code>{{ pub.bibtex | escape }}</code></pre>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<style>
+.content-container {
+    margin-top: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 1em;
+}
+.bibtex-code {
+    white-space: pre-wrap;
+    word-break: break-all;
+    background-color: inherit;
+    padding: 0;
+}
+</style>
+
+<script>
+function toggleElement(id) {
+    var element = document.getElementById(id);
+    if (element) {
+        element.classList.toggle('is-hidden');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const activeTags = urlParams.getAll('tag');
+
+    // --- Update top filter bar links and styles ---
+    const topFilterTags = document.querySelectorAll('.column .tags.are-medium a.tag');
+    topFilterTags.forEach(tagLink => {
+        const tagText = tagLink.textContent;
+        const currentParams = new URLSearchParams(window.location.search);
+        const allTags = currentParams.getAll('tag');
+
+        if (allTags.includes(tagText)) {
+            // Tag is active: highlight it and make the link remove it
+            tagLink.classList.remove('is-light'); // is-link is already there
+            const newParams = new URLSearchParams();
+            allTags.forEach(t => {
+                if (t !== tagText) newParams.append('tag', t);
+            });
+            tagLink.href = '?' + newParams.toString();
+        } else {
+            // Tag is not active: make the link add it
+            currentParams.append('tag', tagText);
+            tagLink.href = '?' + currentParams.toString();
+        }
+    });
+
+    // --- Filter publications based on active tags ---
+    if (activeTags.length > 0) {
+        const publications = document.querySelectorAll('.publication-item');
+        const decodedTags = activeTags.map(t => decodeURIComponent(t).toLowerCase());
+
+        // --- Add a "clear filter" notification ---
+        const container = document.querySelector('.columns.is-multiline');
+        const filterInfo = document.createElement('div');
+        filterInfo.className = 'column is-12';
+        const tagSpans = activeTags.map(t => `<span class="tag is-info">${decodeURIComponent(t)}</span>`).join(' ');
+        filterInfo.innerHTML = `
+            <div class="notification is-info is-light">
+                <div class="level">
+                    <div class="level-left">
+                        <div class="level-item"><strong>Filtering by:</strong></div>
+                        <div class="level-item"><div class="tags">${tagSpans}</div></div>
+                    </div>
+                    <div class="level-right">
+                <a href="${window.location.pathname}" class="button is-small is-dark is-outlined ml-2">Clear Filter</a>
+                    </div>
+                </div>
+            </div>
+        `;
+        container.prepend(filterInfo);
+
+        publications.forEach(pub => {
+            const pubTags = pub.dataset.tags.split(',');
+            const hasAnyTag = decodedTags.some(tag => pubTags.includes(tag));
+            if (!hasAnyTag) {
+                pub.style.display = 'none';
+            }
+        });
+    }
+});
+</script>

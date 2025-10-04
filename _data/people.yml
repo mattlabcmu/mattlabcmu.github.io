@@ -60,11 +60,16 @@ alumni:
 
   - category: Masters Student
     members:
+      - name: "Ryan Darnley"
+        role: "MS in Robotics, 2021"
+        link: "https://www.linkedin.com/in/ryan-darnley-9267ab203/"
+        now: "Senior Software Engineer at Rivian"
+        image: "/img/people/rdarnley.jpg"  
       - name: "Joshua Spisak"
         role: "MS in Robotics, 2023"
         link: "https://www.linkedin.com/in/josh-spisak-b573b972/"
         now: "Senior Systems Engineer at Field AI"
-        image: "/img/people/jspisak.jpg"      
+        image: "/img/people/jspisak.jpg"     
       - name: "Namya Bagree"
         role: "Masters in Mech.E., 2023"
         link: "https://www.linkedin.com/in/namya-bagree/"
@@ -74,7 +79,7 @@ alumni:
         role: "MS ECE, 2024"
         link: "https://www.linkedin.com/in/adam-mescall-johnson/"
         now: "Robotics Engineer at Skild AI"
-        image: "/img/people/ajohnson.jpg"
+        image: "/img/people/ajohnson.jpeg"
       - name: "James Maier"
         role: "MS in Robotics, 2024"
         link: "https://www.linkedin.com/in/jay-maier/"

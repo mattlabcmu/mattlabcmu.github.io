@@ -1,12 +1,20 @@
 ---
 layout: page
-title: MMPUG
-subtitle: Multi-Modal Perception for Urban Ground-truth
-description: This project focuses on creating a comprehensive dataset for urban perception by fusing data from various sensors.
-image: /img/projects/mmpug_hero.jpg
+title: Multi-Modal Perception Uber Good (MMPUG)
+subtitle: The goal of this project is to rapidly map, navigate, and search environments using a fleet of heterogenous robots. The fleet consists on fast moving RC cars and the Spot quadrupedal robot.
+image: /img/projects/mmpug/mmpug_hero.jpg
 link: /projects/mmpug
-link_text: Learn More
-tags: Perception, Autonomous Driving
+tags: 
+    - Perception
+    - Multi-Robot Coordination
+    - SLAM
+    - Heterogenous Robot Control
 ---
 
-This is the project page for MMPUG.
+<div class="columns is-centered">
+    <div class="column is-three-fifths">
+        <figure class="image">
+            <img src="{{ page.image }}" alt="MMPUG Robot">
+        </figure>
+    </div>
+</div>

@@ -60,6 +60,14 @@ collections:
     layout: project
     show_sidebar: false
     permalink: /projects/:path/
+  publications_list: 
+    output: false
+    show_sidebar: false
+    # permalink: /publications_list/:path/
+  news:
+    output: true
+    show_sidebar: true
+    permalink: /news/:path/
 
 social:
   youtube: http://www.youtube.com/@MattLabCMU

@@ -1,3 +1,5 @@
+- name: News
+  link: /news/
 - name: Projects
   link: /projects/
 - name: Publications
@@ -8,3 +10,5 @@
       link: /people/current/
     - name: Alumni
       link: /people/alumni/
+- name: Contact
+  link: /contact/

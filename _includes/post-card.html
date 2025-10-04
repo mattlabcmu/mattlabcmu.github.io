@@ -1,28 +1,53 @@
+{%- comment -%}Determine the primary link for the post (website/details page){%- endcomment -%}
+{%- assign primary_url = nil -%}
+{%- if post.external_url -%}
+    {%- assign primary_url = post.external_url -%}
+{%- elsif post.internal_url -%}
+    {%- assign primary_url = post.internal_url | relative_url -%}
+{%- else -%}
+    {%- assign primary_url = post.url | relative_url -%}
+{%- endif -%}
+
 <div class="card">
     {% if post.image %}
         <div class="card-image">
-            <img src="{{ post.image }}" alt="{{ post.title }}">
+            <a href="{{ primary_url }}" {% if post.external_url %}target="_blank" rel="noopener"{% endif %}>
+                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+            </a>
         </div>
     {% else %}
         <header class="card-header">
-            <a class="card-header-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <a class="card-header-title" href="{{ primary_url }}" {% if post.external_url %}target="_blank" rel="noopener"{% endif %}>{{ post.title }}</a>
         </header>
     {% endif %}
     <div class="card-content">
         <div class="content">
             {% if post.image %}
-                <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <a class="title is-4" href="{{ primary_url }}" {% if post.external_url %}target="_blank" rel="noopener"{% endif %}>{{ post.title }}</a>
             {% endif %}
             {% if post.summary %}
-                {{ post.summary | markdownify }}
+                <p>{{ post.summary | markdownify | strip_html | truncatewords: 10 }}</p>
             {% else %}
-                <p>{{ post.excerpt }}</p>
+                <p>{{ post.excerpt | strip_html | truncatewords: 10 }}</p>
             {% endif %}
         </div>
-        <div class="has-text-centered">
-            <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary"
-                >Read more <span class="is-sr-only"> about {{ post.title }}</span></a
-            >
+        {%- assign read_more_url = primary_url -%}
+        {%- assign read_more_target_blank = false -%}
+        {%- if post.external_url -%}
+            {%- assign read_more_target_blank = true -%}
+        {%- elsif post.internal_url == nil and post.external_url == nil and post.paper_link -%}
+            {%- assign read_more_url = post.paper_link -%}
+            {%- assign read_more_target_blank = true -%}
+        {%- endif -%}
+        <div class="buttons is-centered">
+            <a href="{{ read_more_url }}" class="button is-primary" {% if read_more_target_blank %}target="_blank" rel="noopener"{% endif %}>
+                Read More
+            </a>
+            {% if post.video %}
+                <a href="{{ post.video }}" class="button is-info" target="_blank" rel="noopener">
+                    Video
+                </a>
+            {% endif %}
         </div>
     </div>
     <footer class="card-footer">

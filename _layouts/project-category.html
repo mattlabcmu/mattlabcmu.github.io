@@ -1,0 +1,47 @@
+---
+layout: default
+show_sidebar: false
+---
+<div class="columns is-multiline">
+    <div class="column is-12">
+        {{ page.content }}
+    </div>
+
+    {% if page.collection %}
+        {% assign sorted_projects = site[page.collection] | sort: page.sort %}
+    {% else %}
+        {% assign sorted_projects = site.projects | sort: page.sort %}
+    {% endif %}
+
+    {% for project in sorted_projects %}
+        <div class="column is-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media is-block-mobile">
+                        {% if project.image %}
+                        <div class="media-left">
+                            <figure class="image is-128x128">
+                                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                            </figure>
+                        </div>
+                        {% endif %}
+                        <div class="media-content">
+                            <p class="title is-4">{{ project.title }}</p>
+                            <div class="content">
+                                {{ project.subtitle }}
+                            </div>
+                            {% if project.tags %}
+                            <div class="tags mb-3">
+                                {% for tag in project.tags %}
+                                    <span class="tag is-light">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            <a href="{{ project.url | relative_url }}" class="button is-primary">Know More / Videos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
