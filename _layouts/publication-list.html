@@ -109,21 +109,20 @@ show_sidebar: false
                                     <button class="button is-primary" onclick="toggleElement('bibtex-{{ forloop.index }}')">Cite</button>
                                 {% endif %}
                             </div>
-
-                            {% if pub.content != "" %}
-                            <div id="abstract-{{ forloop.index }}" class="content-container is-hidden">
-                                <div class="content">
-                                    {{ pub.content | markdownify }}
-                                </div>
-                            </div>
-                            {% endif %}
-                            {% if pub.bibtex %}
-                            <div id="bibtex-{{ forloop.index }}" class="content-container is-hidden">
-                                <pre class="bibtex-code"><code>{{ pub.bibtex | escape }}</code></pre>
-                            </div>
-                            {% endif %}
                         </div>
                     </div>
+                    {% if pub.content != "" %}
+                    <div id="abstract-{{ forloop.index }}" class="content-container is-hidden">
+                        <div class="content">
+                            {{ pub.content | markdownify }}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if pub.bibtex %}
+                    <div id="bibtex-{{ forloop.index }}" class="content-container is-hidden">
+                        <pre class="bibtex-code"><code>{{ pub.bibtex | escape }}</code></pre>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
