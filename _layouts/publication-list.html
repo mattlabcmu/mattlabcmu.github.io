@@ -57,17 +57,17 @@ show_sidebar: false
         <div class="column is-12 publication-item" data-tags="{{ pub.tags | join: ',' | downcase }}">
             <div class="card">
                 <div class="card-content">
-                    <div class="media is-block-mobile">
+                    <div class="columns">
                         {% if pub.image %}
-                        <div class="media-left">
+                        <div class="column is-one-quarter">
                             <a href="{{ website_url }}">
-                                <figure class="image is-128x128">
-                                    <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
+                                <figure class="image is-4by3">
+                                    <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}" style="object-fit: contain;">
                                 </figure>
                             </a>
                         </div>
                         {% endif %}
-                        <div class="media-content">
+                        <div class="column">
                             <p class="title is-4">
                                 <a href="{{ website_url }}">{{ pub.title }}</a>
                             </p>
@@ -93,7 +93,7 @@ show_sidebar: false
                                 {% if pub.content != "" %}
                                     <button class="button is-primary" onclick="toggleElement('abstract-{{ forloop.index }}')">Abstract</button>
                                 {% endif %}
-                                {% if website_url %}
+                                {% if pub.internal_url or pub.external_url %}
                                     <a href="{{ website_url }}" class="button is-info" {% if pub.external_url %}target="_blank" rel="noopener"{% endif %}>Website</a>
                                 {% endif %}                                
                                 {% if pub.paper_link %}

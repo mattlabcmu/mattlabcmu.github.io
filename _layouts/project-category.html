@@ -17,15 +17,15 @@ show_sidebar: false
         <div class="column is-12">
             <div class="card">
                 <div class="card-content">
-                    <div class="media is-block-mobile">
+                    <div class="columns is-vcentered">
                         {% if project.image %}
-                        <div class="media-left">
-                            <figure class="image is-128x128">
-                                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                        <div class="column is-one-quarter">
+                            <figure class="image is-4by3">
+                                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" style="object-fit: contain;">
                             </figure>
                         </div>
                         {% endif %}
-                        <div class="media-content">
+                        <div class="column">
                             <p class="title is-4">{{ project.title }}</p>
                             <div class="content">
                                 {{ project.subtitle }}
