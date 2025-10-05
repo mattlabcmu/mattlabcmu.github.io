@@ -15,7 +15,7 @@ published: true
     </div>
 </div>
 
-Dr. Matthew Travers and his students showcased their heterogenous multi-robot team's collaborative autonomy stack at the Ground Vehicles Systems Engineering and Technology Symposium (GVSETS) 2025. The system showcased a wheeled robot autonomously scouting a complex area, identifying a staircase, and seamlessly sharing that data with a Spot quadruped. The Spot then used this information to intelligently plan and execute an autonomous climb, while a third robot simultaneously performed a search mission, highlighting the team's advanced coordination and parallel-tasking capabilities.
+Dr. Matthew Travers and his students showcased their heterogenous multi-robot team's collaborative autonomy stack at the 2025 NDIA Michigan Chapter Ground Vehicle Systems Engineering and Technology Symposium (GVSETS). The system showcased a wheeled robot autonomously scouting a complex area, identifying a staircase, and seamlessly sharing that data with a Spot quadruped. The Spot then used this information to intelligently plan and execute an autonomous climb, while a third robot simultaneously performed a search mission, highlighting the team's advanced coordination and parallel-tasking capabilities.
 
 ---
 

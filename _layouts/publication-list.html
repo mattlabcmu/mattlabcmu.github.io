@@ -73,11 +73,14 @@ show_sidebar: false
                             </p>
                             <p class="subtitle is-6">{{ pub.authors }}</p>
                             <div class="content">
-                                {% if pub.venue %}
+                                {% if pub.venue and pub.venue != "" %}
                                     <em>{{ pub.venue }}</em>
-                                {% endif %}
-                                {% if pub.date %}
-                                    <br><small>Published: {{ pub.date | date: '%B %-d, %Y' }}</small>
+                                    {% if pub.date %}
+                                        <br><small>Published: {{ pub.date | date: '%B %-d, %Y' }}</small>
+                                    {% endif %}
+                                {% else %}
+                                    <em>Preprint</em>
+                                    <br><small> {{ pub.date | date: '%B %-d, %Y' }}</small>
                                 {% endif %}
                             </div>
 

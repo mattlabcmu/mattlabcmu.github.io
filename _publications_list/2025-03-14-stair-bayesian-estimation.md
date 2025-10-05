@@ -5,6 +5,7 @@ venue: "IEEE Robotics and Automation Letters (RA-L)"
 date: 2025-03-10
 paper_link: "https://ieeexplore.ieee.org/document/10918822" 
 external_url: "https://www.prassi.me/bayesian-staircase-estimation" 
+# internal_url:
 github: 'https://github.com/Prassi07/staircase_autonomy'
 video: "https://www.youtube.com/watch?v=8baHgQ_rGLs"
 bibtex: |
