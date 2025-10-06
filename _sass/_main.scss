@@ -23,3 +23,10 @@ $hero-darken: $dark !default;
 .gh-sponsor {
   color: #ea4aaa;
 }
+
+.navbar.is-primary .navbar-burger {
+  color: #800000;
+}
+.navbar.is-primary .navbar-burger:hover {
+  color: #800000; 
+}
