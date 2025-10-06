@@ -11,6 +11,10 @@ tags:
     - Heterogenous Robot Control
 ---
 
+<div class="content">
+  <p>The <strong>MMPUG</strong> project focuses on developing autonomous systems for rapid mapping and exploration in large, unknown, and often hazardous environments. Our goal is to assist a human operator by reducing their workload and enabling effective coordination of multi-robot teams in time-sensitive scenarios like search and rescue.</p>
+</div>
+
 <div class="columns is-centered">
     <div class="column is-three-fifths">
         <figure class="image">
@@ -19,10 +23,6 @@ tags:
     </div>
 </div>
 
-
-<div class="content">
-  <p>The <strong>MMPUG (Multi-Modal Perception Underground)</strong> project focuses on developing autonomous systems for rapid mapping and exploration in large, unknown, and often hazardous environments. Our goal is to assist a human operator by reducing their workload and enabling effective coordination of multi-robot teams in time-sensitive scenarios like search and rescue.</p>
-</div>
 
 <hr>
 
@@ -55,7 +55,7 @@ Our system is designed from the ground up to embody these lessons, resulting in 
     </div>
   </div>
   <div class="column is-6">
-    {% include youtube.html id="mvTMi0uOae4" %}
+    {% include youtube.html video="mvTMi0uOae4" %}
     <p class="has-text-centered is-size-7"><em>A high-speed UGV navigating a complex corridor and obstacle course using Waypoint mode.</em></p>
   </div>
 </div>
@@ -70,7 +70,7 @@ Our system is designed from the ground up to embody these lessons, resulting in 
         </div>
     </div>
     <div class="column is-6">
-        {% include youtube.html id="IhcWP8s4mYU" %}
+        {% include youtube.html video="IhcWP8s4mYU" %}
         <p class="has-text-centered is-size-7"><em>Demonstration of our robust SLAM performance in a long, feature-poor corridor.</em></p>
     </div>
 </div>
@@ -85,7 +85,7 @@ Our system is designed from the ground up to embody these lessons, resulting in 
     </div>
   </div>
   <div class="column is-6">
-    {% include youtube.html id="g0br5gaPTPM" %}
+    {% include youtube.html video="g0br5gaPTPM" %}
     <p class="has-text-centered is-size-7"><em>Robots forming up and maintaining a convoy, with new members joining dynamically.</em></p>
   </div>
 </div>
@@ -100,7 +100,7 @@ Our system is designed from the ground up to embody these lessons, resulting in 
     </div>
   </div>
   <div class="column is-6">
-    {% include youtube.html id="your_video_id_for_peel_off" %}
+    {% include youtube.html video="your_video_id_for_peel_off" %}
     <p class="has-text-centered is-size-7"><em>A follower robot peeling off from the convoy to become a comms relay.</em></p>
   </div>
 </div>
@@ -121,7 +121,7 @@ Navigating between floors is a critical capability for exploring complex urban a
     </div>
   </div>
   <div class="column is-6">
-    {% include youtube.html id="oiZEK4yqoMY" %}
+    {% include youtube.html video="oiZEK4yqoMY" %}
     <p class="has-text-centered is-size-7"><em>Spot traversing multiple continuous flights of stairs while mapping and estimating the staircases.</em></p>
   </div>
 </div>
@@ -136,7 +136,7 @@ Navigating between floors is a critical capability for exploring complex urban a
     </div>
   </div>
   <div class="column is-6">
-    {% include youtube.html id="your_video_id_for_stair_merging" %}
+    {% include youtube.html video="your_video_id_for_stair_merging" %}
     <p class="has-text-centered is-size-7"><em>A wheeled robot detects a staircase, and a Spot robot uses this shared data to navigate to it.</em></p>
   </div>
 </div>
@@ -151,7 +151,7 @@ Navigating between floors is a critical capability for exploring complex urban a
     </div>
   </div>
   <div class="column is-6">
-    {% include youtube.html id="uW5ALUqfOZs" %}
+    {% include youtube.html video="uW5ALUqfOZs" %}
     <p class="has-text-centered is-size-7"><em>A Spot robot autonomously navigating a multi-floor building from a single operator command.</em></p>
   </div>
 </div>
