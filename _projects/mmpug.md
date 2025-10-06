@@ -19,7 +19,9 @@ tags:
     <div class="column is-three-fifths">
         <figure class="image">
             <img src="{{ page.image }}" alt="MMPUG Robot Fleet">
+             <figcaption class="has-text-centered is-size-7"><em>MMPUG Robot Fleet</em></figcaption>
         </figure>
+        
     </div>
 </div>
 
@@ -100,7 +102,7 @@ Our system is designed from the ground up to embody these lessons, resulting in 
     </div>
   </div>
   <div class="column is-6">
-    {% include youtube.html video="your_video_id_for_peel_off" %}
+    {% include youtube.html video="KurYCLacvtk" %}
     <p class="has-text-centered is-size-7"><em>A follower robot peeling off from the convoy to become a comms relay.</em></p>
   </div>
 </div>
@@ -136,7 +138,7 @@ Navigating between floors is a critical capability for exploring complex urban a
     </div>
   </div>
   <div class="column is-6">
-    {% include youtube.html video="your_video_id_for_stair_merging" %}
+    {% include youtube.html video="JmwQB2QTSmQ" %}
     <p class="has-text-centered is-size-7"><em>A wheeled robot detects a staircase, and a Spot robot uses this shared data to navigate to it.</em></p>
   </div>
 </div>
