@@ -2,7 +2,7 @@
 title: "Interaction-aware control for robotic vegetation override in off-road environments"
 authors: "Charles Noren, Bhaskar Vundurthy, Sebastian Scherer and Matthew Travers"
 venue: "Journal of Terramechanics 117 (2025)"
-date: 2025-11-29
+date: 2024-11-29
 paper_link: "https://www.sciencedirect.com/science/article/pii/S0022489824000764" 
 # external_url: "" 
 # video: ""
