@@ -1,6 +1,6 @@
 ---
 title: The Matt Lab
-subtitle: We do Robot Autonomy, for the real-world!
+subtitle: We do Robot Autonomy for the real-world!
 layout: page
 show_sidebar: true
 ---

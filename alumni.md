@@ -27,7 +27,7 @@ permalink: /people/alumni/
                         {% if member.link %}</a>{% endif %}
                     </p>
                     <p class="subtitle is-6">{{ member.role }}</p>
-                    {% if member.now %}<p><strong>Now at:</strong> {{ member.now }}</p>{% endif %}
+                    {% if member.now %}<p><strong>Now:</strong> {{ member.now }}</p>{% endif %}
                 </div>
             </div>
         </div>
