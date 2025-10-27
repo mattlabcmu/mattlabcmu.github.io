@@ -5,7 +5,7 @@
 {%- elsif post.internal_url -%}
     {%- assign primary_url = post.internal_url | relative_url -%}
 {%- else -%}
-    {%- assign primary_url = post.url | relative_url -%}
+    {%- assign primary_url = post.paper_link -%}
 {%- endif -%}
 
 <div class="card">

@@ -5,6 +5,7 @@
 - name: Publications
   link: /publications/
 - name: People
+  link: /people/current/
   dropdown:
     - name: Current Members
       link: /people/current/
