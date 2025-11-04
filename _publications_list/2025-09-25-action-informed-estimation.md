@@ -4,7 +4,7 @@ authors: "Prasanna Sriganesh, Barath Satheeshkumar, Anushree Sabnis and Matthew 
 # venue: ""
 date: 2025-09-25
 paper_link: "https://arxiv.org/abs/2509.20516" 
-# external_url: "" 
+external_url: "https://www.prassi.me/clearing-clutter-on-stairs" 
 video: "https://www.youtube.com/watch?v=CTss0FFHwNU"
 bibtex: |
   @article{sriganesh2025actioninformed,

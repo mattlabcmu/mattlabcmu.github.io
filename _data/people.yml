@@ -46,6 +46,10 @@ current:
             role: "Robotics Masters Student"
             link: "http://dhruvdange.com/"
             image: "/img/people/ddange.jpg"
+          - name: "Kaushik Chavali"
+            role: "Robotics Masters Student"
+            link: "https://www.linkedin.com/in/kaushik-chavali-a66885233/"
+            image: "/img/people/kchavali.jpg"
 
   # - category: Visiting Scholars
   #   members:
