@@ -12,7 +12,7 @@ We are part of the [Robotics Institute](https://www.ri.cmu.edu/) at [Carnegie Me
 # Recent News
 
 <div class="columns is-multiline">
-    {% for post in site.news limit: 2 %}
+    {% for post in site.news reversed limit: 2 %}
         <div class="column is-6">
             {% include post-card-news.html %}
         </div>

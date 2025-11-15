@@ -6,7 +6,7 @@ show_sidebar: false
 ---
 
 <div class="columns is-multiline">
-    {% for post in site.news %}
+    {% for post in site.news reversed %}
         <div class="column is-one-third">
             {% include post-card-news.html %}
         </div>
