@@ -49,6 +49,11 @@ div.highlight {
     display: none !important;
 }
 
+.research-card .card {
+    --bulma-card-background-color: #fff8f0;
+    background-color: #fff8f0;
+}
+
 .skip-link {
     &:focus {
         display: block !important;

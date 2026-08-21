@@ -11,5 +11,7 @@
       link: /people/current/
     - name: Alumni
       link: /people/alumni/
+- name: Gallery
+  link: /gallery/
 - name: Contact
   link: /contact/

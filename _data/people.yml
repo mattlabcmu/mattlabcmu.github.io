@@ -11,10 +11,6 @@ current:
 
   - category: Staff/Postdocs
     members:
-      - name: "Dr. Zongyuan Shen"
-        role: "Postdoctoral Fellow"
-        link: "https://zongyuanshen.github.io/"
-        image: "/img/people/zshen.jpg"
       - name: "Ralph Boirum"
         role: "Engineer"
         link: "https://www.linkedin.com/in/ralph-boirum-6a86a461/"
@@ -28,20 +24,12 @@ current:
             role: "Robotics Ph.D Student"
             link: "https://prassi.me"
             image: "/img/people/psriganesh.jpg"
-          - name: "Burhanuddin Shirose"
-            role: "Mech.E. Ph.D Student"
-            link: "https://bshirose.github.io/"
-            image: "/img/people/b_shirose.jpg"
       - category: Masters Students
         members:
-          - name: "Anushree Sabnis"
-            role: "Mech.E. Masters Student"
-            link: "https://anushreesabnis.notion.site/Anushree-Sabnis-27ac5ae25b858060ad77f16c5df46a28"
-            image: "/img/people/asabnis.jpg"
-          - name: "Barath Satheeshkumar"
-            role: "Mech.E. Masters Student"
-            link: "https://www.linkedin.com/in/barathkrishnas"
-            image: "/img/people/bsathees.jpg"
+          - name: "Tingrui Zhang"
+            role: "ECE Masters Student"
+            link: "https://tingruizh.github.io/"
+            image: "/img/people/tingruiz.jpg"
           - name: "Dhruv Dange"
             role: "Robotics Masters Student"
             link: "http://dhruvdange.com/"
@@ -51,6 +39,11 @@ current:
             link: "https://www.linkedin.com/in/kaushik-chavali-a66885233/"
             image: "/img/people/kchavali.jpg"
 
+  - category: Undergraduates
+    members:
+      - name: "Mithun Roy"
+        role: "Undergraduate Student"
+
   # - category: Visiting Scholars
   #   members:
   #     - name: "Example"
@@ -58,6 +51,13 @@ current:
   #       image: "/img/people/placeholder.png"
 
 alumni:
+  - category: Postdocs
+    members:
+      - name: "Dr. Zongyuan Shen"
+        role: "Postdoctoral Fellow"
+        link: "https://zongyuanshen.github.io/"
+        image: "/img/people/zshen.jpg"
+
   - category: PhD Students
     members:
       - name: "Dr. Charles Noren"
@@ -65,6 +65,10 @@ alumni:
         link: "https://www.linkedin.com/in/charles-noren-53795a366/"
         now: "Army"
         image: "/img/people/cnoren.jpg"
+      - name: "Burhanuddin Shirose"
+        role: "PhD in Mech.E."
+        link: "https://bshirose.github.io/"
+        image: "/img/people/b_shirose.jpg"
 
   - category: Masters Student
     members:
@@ -113,3 +117,11 @@ alumni:
         link: "https://www.linkedin.com/in/rohan-shekhar/"
         now: "Robotics Software Engineer at Mujin"
         image: "/img/people/rchandra.jpg"
+      - name: "Anushree Sabnis"
+        role: "MS in Mech.E."
+        link: "https://anushreesabnis.notion.site/Anushree-Sabnis-27ac5ae25b858060ad77f16c5df46a28"
+        image: "/img/people/asabnis.jpg"
+      - name: "Barath Satheeshkumar"
+        role: "MS in Mech.E."
+        link: "https://www.linkedin.com/in/barathkrishnas"
+        image: "/img/people/bsathees.jpg"

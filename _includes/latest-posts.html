@@ -3,7 +3,7 @@
 <div class="columns is-multiline">
     {% assign sorted_publications = site.publications_list | sort: 'date' | reverse %}
     {% for post in sorted_publications limit: 2 %}
-        <div class="column is-12">
+        <div class="column is-12 research-card">
             {% include post-card.html %}
         </div>
     {% endfor %}

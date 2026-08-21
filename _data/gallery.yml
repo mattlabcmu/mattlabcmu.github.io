@@ -1,0 +1,15 @@
+# Lab gallery photos.
+# Add a new picture by copying a block below.
+# Put the image file in img/gallery/, then set `image` and `title` here.
+#
+#   - title: "Short caption"
+#     image: /img/gallery/your-photo.jpg
+
+- title: "PRN 2025"
+  image: /img/gallery/mattlab_prn_2025.jpg
+
+- title: "Lab lunch at Udipi Cafe"
+  image: /img/gallery/lab_lunch_udupi.png
+
+- title: "Dominick's sendoff :("
+  image: /img/gallery/August_lab_lunch.jpg
