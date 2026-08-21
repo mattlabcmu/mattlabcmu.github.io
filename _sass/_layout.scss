@@ -30,6 +30,133 @@ div.highlight {
     background-color: rgba($hero-darken, 0.5);
 }
 
+.hero-collage {
+    position: relative;
+    overflow: hidden;
+    background-color: #1a1210;
+
+    .hero-body {
+        position: relative;
+        z-index: 3;
+    }
+
+    .title,
+    .subtitle {
+        color: #fffaf6;
+        font-weight: 800;
+        text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
+    }
+
+    .subtitle {
+        color: #ffd2b8;
+        font-weight: 700;
+    }
+
+    @include touch {
+        .subtitle.is-3 {
+            font-size: 1.5rem;
+        }
+    }
+
+    @include widescreen {
+        &.is-medium .hero-body {
+            padding-top: 10.35rem;
+            padding-bottom: 10.35rem;
+        }
+    }
+}
+
+.hero-collage-art {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-collage-shade {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at center, rgba(20, 8, 6, 0.2) 0%, rgba(20, 8, 6, 0.55) 100%),
+        linear-gradient(180deg, rgba(128, 0, 0, 0.18) 0%, rgba(20, 8, 6, 0.45) 100%);
+}
+
+.hero-collage-img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 0.4rem;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+
+    &.is-1 {
+        width: 48%;
+        height: 92%;
+        left: -6%;
+        top: -18%;
+        transform: rotate(-8deg);
+    }
+
+    &.is-2 {
+        width: 42%;
+        height: 88%;
+        right: -8%;
+        top: -22%;
+        transform: rotate(7deg);
+    }
+
+    &.is-3 {
+        width: 40%;
+        height: 78%;
+        left: 6%;
+        bottom: -28%;
+        transform: rotate(5deg);
+    }
+
+    &.is-4 {
+        width: 38%;
+        height: 80%;
+        right: 8%;
+        bottom: -24%;
+        transform: rotate(-6deg);
+    }
+
+    &.is-5 {
+        width: 34%;
+        height: 72%;
+        left: 33%;
+        top: 6%;
+        transform: rotate(3deg);
+        z-index: 2;
+    }
+}
+
+@include touch {
+    .hero-collage-img.is-4,
+    .hero-collage-img.is-5 {
+        display: none;
+    }
+
+    .hero-collage-img.is-1 {
+        width: 70%;
+        height: 95%;
+        left: -12%;
+    }
+
+    .hero-collage-img.is-2 {
+        width: 62%;
+        height: 90%;
+        right: -14%;
+    }
+
+    .hero-collage-img.is-3 {
+        width: 58%;
+        height: 70%;
+        left: 22%;
+        bottom: -30%;
+    }
+}
+
 .content {
     figure {
         margin: 0;

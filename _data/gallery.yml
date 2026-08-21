@@ -1,15 +1,24 @@
-# Lab gallery photos.
-# Add a new picture by copying a block below.
-# Put the image file in img/gallery/, then set `image` and `title` here.
+# Lab gallery media.
+# Photos: put the file in img/gallery/, then add a block under `photos`.
+# Videos: add a YouTube id under `videos` (the part after youtu.be/).
 #
-#   - title: "Short caption"
-#     image: /img/gallery/your-photo.jpg
+#   photos:
+#     - title: "Short caption"
+#       image: /img/gallery/your-photo.jpg
+#   videos:
+#     - title: "Short caption"
+#       youtube_id: dQw4w9WgXcQ
 
-- title: "PRN 2025"
-  image: /img/gallery/mattlab_prn_2025.jpg
+photos:
+  - title: "PRN 2025"
+    image: /img/gallery/mattlab_prn_2025.jpg
 
-- title: "Lab lunch at Udipi Cafe"
-  image: /img/gallery/lab_lunch_udupi.png
+  - title: "Lab lunch at Udipi Cafe"
+    image: /img/gallery/lab_lunch_udupi.png
 
-- title: "Dominick's sendoff :("
-  image: /img/gallery/August_lab_lunch.jpg
+  - title: "Dominick's sendoff :("
+    image: /img/gallery/August_lab_lunch.jpg
+
+videos:
+  - title: "Spot's Halloween candy run"
+    youtube_id: weCLrurMnlU

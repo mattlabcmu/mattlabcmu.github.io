@@ -93,6 +93,19 @@
     font-size: 1.1rem;
 }
 
+.lab-gallery-video {
+    background: #fffdf8;
+    padding: 0.9rem 0.9rem 1.15rem;
+    border-radius: 0.5rem;
+    box-shadow:
+        0 10px 24px rgba(128, 0, 0, 0.1),
+        0 2px 6px rgba(80, 40, 20, 0.08);
+
+    .lab-gallery-caption {
+        margin-top: 0.85rem;
+    }
+}
+
 @include touch {
     .lab-gallery-polaroid,
     .lab-gallery .column:nth-child(3n + 2) .lab-gallery-polaroid,
