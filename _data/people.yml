@@ -42,7 +42,9 @@ current:
   - category: Undergraduates
     members:
       - name: "Mithun Roy"
-        role: "Undergraduate Student"
+        role: "ECE Student"
+        link: "https://www.linkedin.com/in/mithroy/"
+        image: "/img/people/mithunr.jpg"
 
   # - category: Visiting Scholars
   #   members:
